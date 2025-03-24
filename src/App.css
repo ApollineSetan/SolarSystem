@@ -1,21 +1,60 @@
-body {
+.canvas-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #000;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
 }
 
 canvas {
-  background-color: black;
-  display: block;
-  margin: 0 auto;
+  border: 1px solid #444;
+  background-color: #000;
 }
 
-h1 {
+.planets-list {
+  max-width: 250px;
+}
+
+.planet-item {
+  margin-bottom: 10px;
+}
+
+.planet-button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.planet-button:hover {
+  background-color: #555;
+}
+
+.planet-info-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
   color: white;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 40px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: block; /* Assure-toi que l'élément est affiché */
+  transition: opacity 0.3s ease;
 }
 
+.planet-info-card img {
+  width: 100%; /* L'image prend toute la largeur de la carte */
+  max-height: 400px; /* Limite la hauteur de l'image */
+  object-fit: cover; /* Maintient le ratio de l'image sans déformer */
+  margin-top: 10px; /* Un peu d'espace entre le texte et l'image */
+}
+
+.planet-info-card h3 {
+  font-size: 1.5em;
+}
+
+.planet-info-card p {
+  font-size: 1em;
+}
